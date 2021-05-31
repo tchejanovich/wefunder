@@ -25,9 +25,12 @@ body {
   margin-top: 40px;
 }
 
+#wefunder-logo-container {
+  margin: auto;
+}
+
 #wefunder-logo {
   width: 200px;
-  margin: auto;
 }
 
 #content-container {
