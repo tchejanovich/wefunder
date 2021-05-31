@@ -2,6 +2,8 @@ module CompaniesHelper
     class CompaniesControllerHandler
         include PitchDeckSplitter
 
+        EMPTY_STRING = ''
+
         def initialize(params)
             @company_params = params
         end
@@ -25,7 +27,7 @@ module CompaniesHelper
         end
 
         def valid_string(value)
-            value.present? && value != ''
+            value.present? && value != EMPTY_STRING
         end
 
         def valid_attachment(value)
