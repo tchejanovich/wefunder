@@ -1,24 +1,31 @@
-# README
+# WeFunder
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisistes
 
-Things you may want to cover:
+Make sure you have the following requirements installed:
 
-* Ruby version
+- [rbenv](https://github.com/rbenv/rbenv)
+- [Ruby on Rails](https://rubyonrails.org/)
+- [Prerequisistes for RMagick](https://github.com/rmagick/rmagick)
+- [bundler](https://bundler.io/)
+- [PostgreSQL](https://www.postgresql.org/)
 
-* System dependencies
+## Getting started
 
-* Configuration
+Make sure you have Postgres running and create a database named `wefunder`. Then configure your credentials on `config/database.yml` file.
 
-* Database creation
+Run the following commands:
 
-* Database initialization
+```
+bundle install
+```
 
-* How to run the test suite
+```
+rake db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails s
+```
 
-* Deployment instructions
-
-* ...
+The application should be available on `localhost:3000`.

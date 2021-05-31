@@ -1,0 +1,13 @@
+<p class="section-title">About the company</p>
+<p class="company-title"><%= @company.name %></p>
+<p><%= @company.description %></p>
+
+
+<div style="text-align: center;">
+    <p class="section-title">About the business</p>
+    <% @company.pitch_deck_images.each do |image| %>  
+        <div class="pitch-image-container">
+            <%= image_tag("uploads/#{image.filename}", class: 'pitch-image"') %>
+        </div>
+    <% end %>
+</div>

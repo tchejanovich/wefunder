@@ -1,0 +1,22 @@
+<div>     
+    <%= link_to("Add new company", new_company_path, id: 'add-company-link', class: 'black-button') %>
+    <hr style="margin-top: 50px;" />
+
+    <% if @companies.empty? %>   
+    <div>   
+        <p id="no-companies-label">There are no listed companies at the moment</p>    
+    </div>   
+    <% else %>
+        <p class="section-title">Listed companies</p>
+
+        <div>
+            <% @companies.each do |company| %>
+                <div class="company-container">
+                    <p class="company-title"><%= company.name %></p>
+                    <p style="margin-bottom: 30px;"><%= company.description %></p>
+                    <%= link_to('Learn more', company_path(company), class: 'black-button') %>
+                </div>
+            <% end %> 
+        </div> 
+    <% end %>
+</div>

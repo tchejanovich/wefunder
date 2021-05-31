@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+#header-container {
+  display: flex;
+  margin-top: 40px;
+}
+
+#wefunder-logo {
+  width: 200px;
+  margin: auto;
+}
+
+#content-container {
+  width: 70%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+#notice-label {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 20px;
+}

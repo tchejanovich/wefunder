@@ -1,0 +1,29 @@
+<div class="form-container">  
+    <% if !@company.errors.empty? %>   
+        <div>   
+            <ul>   
+                <% @companys.errors.full_messages.each do |msg| %>   
+                    <li><%= msg %></li>   
+                <% end %>      
+            </ul>         
+        </div>   
+    <% end %>      
+
+    <%= form_for @company, html: { multipart: true } do |f| %>
+        <div class="form-text-input-container">
+            <span class="form-text-input-label">Name</span>
+            <%= f.text_field :name %>
+        </div>
+        <div class="form-text-input-container">
+            <span class="form-text-input-label">Description</span> 
+            <%= f.text_area :description %>   
+        </div>
+
+        <div class="form-text-input-container">
+            <span class="form-text-input-label">Attachment (PDF)</span>  
+            <%= f.file_field :attachment, accept: 'application/pdf', class: 'file-field' %>
+        </div>
+        <br>
+        <%= f.submit "Save", class: 'black-button submit-button' %>   
+    <% end %>   
+</div>  
