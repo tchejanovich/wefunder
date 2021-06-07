@@ -11,7 +11,8 @@ class CompaniesController < ApplicationController
   end 
   
   def show
-    @company = Company.find(params[:id]) 
+    @company = Company.find(params[:id])
+    @pitch_deck_images = @company.pitch_deck_images.order(:id)
     @images_path = UPLOADS_PATH
   end 
     
